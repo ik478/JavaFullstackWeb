@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Java API Website</h1>
+
+<button onclick="callApi()">
+Press Me
+</button>
+
+<p id="result"></p>
+
+<script>
+async function callApi(){
+
+const r = await fetch('/api/hello');
+const text = await r.text();
+
+document.getElementById(
+'result'
+).innerText = text;
+
+}
+</script>
+
+</body>
+</html>
